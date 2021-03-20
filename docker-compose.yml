@@ -10,7 +10,7 @@ services:
     environment:
       - TZ=Europe/Berlin
       - HASHTABLE="/mnt/.beeshome/beeshash.dat"
-      - HSH_TABLE_SIZE="4g"
+      - HASH_TABLE_SIZE="4g"
       - OPTIONS=-a
     volumes:
       - /mnt:/mnt
