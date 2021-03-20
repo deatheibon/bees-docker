@@ -1,4 +1,4 @@
-# deatheibon/keeweb-webdav
+# deatheibon/bees
 
 Dockerized Best-Effort Extent-Same btrfs deduplication agent.
 https://github.com/Zygo/bees
