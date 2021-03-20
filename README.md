@@ -5,9 +5,23 @@ https://github.com/Zygo/bees
 
 This image is based on Alpine Linux with bees agent from testing repositories. 
 
-# Usage
+## Usage
 
-# docker-compose
+Mount BTRFS root subvolume to /mnt for example like: 
+
+mount /dev/"device" /mnt -o subol=/
+
+adjust the docker-compose volumes section. 
+
+## docker run
+
+### daemonized
+docker run -d --privileged -e HASHTABLE="/mnt/.beeshome/beeshash.dat" -e HASH_TABLE_SIZE="4g" -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
+
+### interactive
+docker run -ti --privileged -e HASHTABLE="/mnt/.beeshome/beeshash.dat" -e HASH_TABLE_SIZE="4g" -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
+
+## docker-compose
 ```version: '3.3'
 services:
   beesd:
@@ -24,8 +38,4 @@ services:
       - OPTIONS=-a
     volumes:
       - /mnt:/mnt
-      - HASH_TABLE:/home/bees
-
-volumes:
-  HASH_TABLE:
 ```
