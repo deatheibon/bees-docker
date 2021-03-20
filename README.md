@@ -27,4 +27,5 @@ services:
       - HASH_TABLE:/home/bees
 
 volumes:
-  HASH_TABLE:```
+  HASH_TABLE:
+```
