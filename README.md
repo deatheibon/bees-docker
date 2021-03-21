@@ -9,7 +9,7 @@ This image is based on Alpine Linux with bees agent from testing repositories.
 
 Mount BTRFS root subvolume to /mnt for example like: 
 
-mount /dev/"device" /mnt -o subol=/
+mount /dev/"device" /mnt -o subvol=/
 
 adjust the docker-compose volumes section. 
 
