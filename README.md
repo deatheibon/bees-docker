@@ -26,11 +26,10 @@ docker run -ti --privileged -e HASHTABLE="/mnt/.beeshome/beeshash.dat" -e HASH_T
 services:
   beesd:
     container_name: beesd
+    image: deatheibon/bees
     privileged: true
     restart: unless-stopped
     hostname: beesd
-    build:
-      context: .
     environment:
       - TZ=Europe/Berlin
       - HASHTABLE="/mnt/.beeshome/beeshash.dat"
