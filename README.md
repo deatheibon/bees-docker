@@ -32,7 +32,7 @@ services:
     hostname: beesd
     environment:
       - TZ=Europe/Berlin
-      - HASHTABLE="/mnt/.beeshome/beeshash.dat"
+      - HASH_TABLE="/mnt/.beeshome/beeshash.dat"
       - HASH_TABLE_SIZE="4g"
       - OPTIONS=-a
     volumes:
