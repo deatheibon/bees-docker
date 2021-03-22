@@ -11,6 +11,6 @@ services:
       - TZ=Europe/Berlin
       - HASH_TABLE=/mnt/.beeshome/beeshash.dat
       - HASH_TABLE_SIZE=4G
-      - OPTIONS=-a
+      - OPTIONS=-a -c 1
     volumes:
       - /mnt:/mnt
