@@ -16,10 +16,10 @@ adjust the docker-compose volumes section.
 ## docker run
 
 ### daemonized
-docker run -d --privileged -e HASHTABLE="/mnt/.beeshome/beeshash.dat" -e HASH_TABLE_SIZE="4g" -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
+docker run -d --privileged -e HASH_TABLE=/mnt/.beeshome/beeshash.dat -e HASH_TABLE_SIZE=4G -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
 
 ### interactive
-docker run -ti --privileged -e HASHTABLE="/mnt/.beeshome/beeshash.dat" -e HASH_TABLE_SIZE="4g" -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
+docker run -ti --privileged -e HASH_TABLE=/mnt/.beeshome/beeshash.dat -e HASH_TABLE_SIZE=4G -e OPTIONS=-a -v /mnt:/mnt deatheibon/bees
 
 ## docker-compose
 ```version: '3.3'
@@ -32,8 +32,8 @@ services:
     hostname: beesd
     environment:
       - TZ=Europe/Berlin
-      - HASH_TABLE="/mnt/.beeshome/beeshash.dat"
-      - HASH_TABLE_SIZE="4g"
+      - HASH_TABLE=/mnt/.beeshome/beeshash.dat
+      - HASH_TABLE_SIZE=4G
       - OPTIONS=-a
     volumes:
       - /mnt:/mnt
