@@ -3,7 +3,7 @@
 Dockerized Best-Effort Extent-Same btrfs deduplication agent.
 https://github.com/Zygo/bees
 
-This image is based on Alpine Linux with bees agent from testing repositories. 
+This image is based on Ubuntu Linux with bees agent from testing repositories. 
 
 ## Usage
 
