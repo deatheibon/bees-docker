@@ -8,9 +8,8 @@ services:
     build:
       context: .
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/Rome
       - HASH_TABLE=/mnt/.beeshome/beeshash.dat
       - HASH_TABLE_SIZE=4G
       - OPTIONS=-a -c 1
-    volumes:
-      - /mnt:/mnt
+      - CACHEDEV=cachedev_1
