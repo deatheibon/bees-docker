@@ -8,4 +8,4 @@ if [ ! -f ${HASH_TABLE} ]; then
 	truncate -s ${HASH_TABLE_SIZE} ${HASH_TABLE}
 	chmod 700 ${HASH_TABLE}
 fi
-exec /bin/bees --no-timestamps ${OPTIONS} /mnt
+exec /bin/bees --no-timestamps ${OPTIONS} /mnt 2>&1
