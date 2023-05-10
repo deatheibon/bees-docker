@@ -1,4 +1,6 @@
 #!/bin/sh
+# Trigger an error if non-zero exit code is encountered
+set -e 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 mount /dev/mapper/$CACHEDEV /mnt -o subvol=/
 if [ ! -f ${HASH_TABLE} ]; then
@@ -6,4 +8,4 @@ if [ ! -f ${HASH_TABLE} ]; then
 	truncate -s ${HASH_TABLE_SIZE} ${HASH_TABLE}
 	chmod 700 ${HASH_TABLE}
 fi
-bees --no-timestamps ${OPTIONS} /mnt
+exec /bin/bees --no-timestamps ${OPTIONS} /mnt
