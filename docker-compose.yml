@@ -7,6 +7,7 @@ services:
     hostname: beesd
     build:
       context: .
+    image: rylos/beesd:latest
     environment:
       - TZ=Europe/Rome
       - HASH_TABLE=/mnt/.beeshome/beeshash.dat
